@@ -1,0 +1,115 @@
+# 🚀 FloatChat Startup Guide
+
+## Prerequisites
+
+Make sure you have installed:
+
+* Python 3.10 or later
+* Git
+* OpenAI API Key
+* (Optional) Ollama with Llama 3 model
+
+---
+
+## Step 1: Clone the Repository
+
+```bash
+git clone <your-github-repository-url>
+cd FloatChat
+```
+
+---
+
+## Step 2: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Step 3: Add Your OpenAI API Key
+
+### Windows (Command Prompt)
+
+```cmd
+set OPENAI_API_KEY=your_api_key_here
+```
+
+### PowerShell
+
+```powershell
+$env:OPENAI_API_KEY="your_api_key_here"
+```
+
+### Linux / macOS
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
+
+---
+
+## Step 4: Start the Backend Server
+
+```bash
+uvicorn hackvibe_merged:app --reload
+```
+
+Wait until you see:
+
+```text
+INFO: Uvicorn running on http://127.0.0.1:8000
+```
+
+Keep this terminal open.
+
+---
+
+## Step 5: Start the Frontend
+
+Open a new terminal and run:
+
+```bash
+streamlit run chatbot_ui3.py
+```
+
+The application will open automatically in your browser.
+
+If it does not open automatically, visit:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## Step 6: Start Exploring the Dataset
+
+Example questions:
+
+* What is the mean temperature?
+* Show columns in the dataset
+* Plot TEMP vs PSAL
+* Show daily nitrate trend
+* Plot temperature profile versus pressure
+
+---
+
+## Stopping the Application
+
+Press:
+
+```text
+CTRL + C
+```
+
+in both terminal windows.
+
+---
+
+## Notes
+
+* Ensure the dataset file (`testing.csv`) is present in the project directory.
+* If OpenAI is unavailable, FloatChat can use Ollama (Llama 3) as a fallback model.
+* The backend must be running before starting the Streamlit frontend.
