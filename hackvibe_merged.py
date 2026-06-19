@@ -14,7 +14,14 @@ import subprocess
 
 # --- Load dataset ---
 
-df = pd.read_csv(r"C:\Users\vrish\OneDrive\Desktop\argo_monthly\testing.csv")
+import os
+
+DATASET_PATH = os.path.join(
+    os.path.dirname(__file__),
+    "testing.csv"
+)
+
+df = pd.read_csv(DATASET_PATH)
 
 # ✅ Detect datetime column
 
